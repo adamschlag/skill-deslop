@@ -1,6 +1,6 @@
 # deslop
 
-A Claude skill for removing AI writing patterns from prose.
+An OpenCode skill for removing AI writing patterns from prose.
 
 ## What it does
 
@@ -12,29 +12,25 @@ The skill works across any prose context. Examples are weighted toward scientifi
 
 **Option 1: Download ZIP**
 
-Click the green **Code** button at the top of this repo, then **Download ZIP**. Extract the ZIP and add the folder to your Claude skills directory.
+Click the green **Code** button at the top of this repo, then **Download ZIP**. Extract the ZIP and add the folder to your OpenCode skills directory.
 
-**Option 2: Releases**
+**Option 2: Build it yourself**
 
-Go to the [Releases](https://github.com/stephenturner/skill-deslop/releases) page and download the latest `.skill` file. Add it to your Claude skills in [customize/skills](https://claude.ai/customize/skills) on the web, or double-click it if you have Claude Desktop installed.
-
-**Option 3: Build it yourself**
-
-Build a `.skill` file from the source code, then add it to your Claude skills as described above.
+Build a `.skill` file from the source code, then add it to your OpenCode skills as described above.
 
 ```sh
-git clone https://github.com/stephenturner/skill-deslop.git
-cd skill-deslop
+git clone https://github.com/adamschlag/skill-deslop.git
+cd skill-deslop/skills
 zip -r deslop.skill SKILL.md references/
 ```
 
 ## How to use it
 
-Install as described above, then use it like you normally talk to Claude. The skill triggers automatically when you:
+Install as described above, then use it like you normally talk to OpenCode. The skill triggers automatically when you:
 
-- Ask Claude to write prose (blog posts, essays, articles, memos, newsletters) making it sound natural instead of AI-generated
-- Ask Claude to "deslop", "de-AI" or "make it sound human"
-- Ask Claude to check for "slop" or AI patterns
+- Ask OpenCode to write prose (blog posts, essays, articles, memos, newsletters) making it sound natural instead of AI-generated
+- Ask OpenCode to "deslop", "de-AI" or "make it sound human"
+- Ask OpenCode to check for "slop" or AI patterns
 
 You can also reference the skill directly:
 
@@ -60,13 +56,14 @@ Below 35/50: revise.
 
 ```
 deslop/
-├── SKILL.md              # Core rules, quick checks, scoring rubric
-├── README.md             # This file
-└── references/
-    ├── phrases.md        # Phrases to remove or replace
-    ├── structures.md     # Structural patterns to avoid
-    ├── tropes.md         # Full catalog of AI writing tropes
-    └── examples.md       # Before/after transformations
+├── README.md             	  # This file
+└── skills/
+	├── SKILL.md              # Core rules, quick checks, scoring rubric
+	└── references/	          # ESSENTIAL. Make sure this comes over along with the main skill
+        ├── phrases.md        # Phrases to remove or replace
+    	├── structures.md     # Structural patterns to avoid
+    	├── tropes.md         # Full catalog of AI writing tropes
+    	└── examples.md       # Before/after transformations
 ```
 
 ## Acknowledgments
